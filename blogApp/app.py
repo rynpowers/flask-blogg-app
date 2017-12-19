@@ -18,8 +18,8 @@ def close_db(error):
     if hasattr(g, 'sqlite3_db'):
         g.sqlite_db.close()
 
-@app.route('/settings', methods=['GET', 'POST'])
-def settings():
+@app.route('/', methods=['GET', 'POST'])
+def index():
     if request.method == 'POST':
         first_name = request.form['first-name']
         last_name = request.form['last-name']
@@ -36,7 +36,7 @@ def settings():
 
         return redirect('profile')
 
-    return render_template('settings.html')
+    return render_template('index.html')
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
