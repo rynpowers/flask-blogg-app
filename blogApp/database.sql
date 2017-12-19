@@ -1,3 +1,4 @@
+drop table blog;
 drop table posts;
 
 create table blog (
