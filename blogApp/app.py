@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, g, redirect
-from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 import datetime
 import sqlite3
 
